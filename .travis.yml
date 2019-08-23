@@ -1,0 +1,24 @@
+# Branch whitelist
+branches:
+  only:
+    - master
+# Caching of bower_components & node_modules disabled, due to an increase in delayed breakages
+cache:
+  npm: false
+  directories: null
+dist: trusty
+language: node_js
+node_js:
+  - '12'
+  - '10'
+  - '8'
+matrix:
+  include:
+    - node_js: '12'
+      env: INTEGRATION=true
+before_script:
+  - node_modules/fs-common-build-scripts/bin/before_script.sh
+script:
+  # - if [ $INTEGRATION == true ]; then npm run integration; else npm test; fi
+after_script:
+  - node_modules/fs-common-build-scripts/bin/after_script.sh

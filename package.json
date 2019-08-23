@@ -1,0 +1,52 @@
+{
+	"name": "eslint-plugin-bestpractices",
+	"version": "0.1.0",
+	"description": "ESLint plugin to support various best practices",
+	"license": "MIT",
+	"repository": "skye2k2/eslint-plugin-bestpractices",
+	"author": {
+		"name": "Clif Bergmann",
+		"email": "skye.orkan@gmail.com",
+		"url": "https://github.com/skye2k2"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "nyc ava"
+	},
+	"files": [
+		"index.js",
+		"rules"
+	],
+	"keywords": [
+		"bestpractices",
+		"eslint",
+		"eslint-disable",
+		"eslint-plugin",
+		"eslintplugin",
+		"linting",
+		"linter",
+		"lint",
+		"style"
+	],
+	"dependencies": {
+		"eslint-ast-utils": "^1",
+		"import-modules": "^1"
+	},
+	"devDependencies": {
+		"ava": "^2",
+		"eslint": "^6",
+		"eslint-ava-rule-tester": "^3",
+		"eslint-plugin-eslint-plugin": "2",
+		"nyc": "^14"
+	},
+	"peerDependencies": {
+		"eslint": ">=6.2.0"
+	},
+	"ava": {
+		"files": [
+			"test/*.js"
+		]
+	}
+}
