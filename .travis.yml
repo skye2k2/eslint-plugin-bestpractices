@@ -17,8 +17,11 @@ matrix:
     - node_js: '12'
       env: INTEGRATION=true
 before_script:
-  - node_modules/fs-common-build-scripts/bin/before_script.sh
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script:
   # - if [ $INTEGRATION == true ]; then npm run integration; else npm test; fi
 after_script:
-  - node_modules/fs-common-build-scripts/bin/after_script.sh
+  - ./cc-test-reporter format-coverage --output reports/coverage/codeclimate.json -t lcov reports/coverage/lcov.info
+  - ./cc-test-reporter upload-coverage -i reports/coverage/codeclimate.json
