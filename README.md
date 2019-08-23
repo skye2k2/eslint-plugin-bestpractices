@@ -1,5 +1,7 @@
 # eslint-plugin-bestpractices
 
+[![Build Status](https://travis-ci.com/skye2k2/eslint-plugin-bestpractices.svg?branch=master)](https://travis-ci.com/skye2k2/eslint-plugin-bestpractices) [![Maintainability](https://api.codeclimate.com/v1/badges/42dee44955a4fd7c7e03/maintainability)](https://codeclimate.com/github/skye2k2/eslint-plugin-bestpractices/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/42dee44955a4fd7c7e03/test_coverage)](https://codeclimate.com/github/skye2k2/eslint-plugin-bestpractices/test_coverage)
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
