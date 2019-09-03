@@ -16,7 +16,7 @@ Next, install `eslint-plugin-bestpractices `:
 $ npm install https://github.com/skye2k2/eslint-plugin-bestpractices.git --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-deprecate` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-bestpractices` globally.
 
 ## Usage
 
