@@ -1,15 +1,15 @@
 'use strict';
 const getDocsUrl = require('./utils/get-docs-url');
 
-const eslintDisabledRegex = /^eslint-disable/; // Discover any place that eslint-disable is used
+const eslintDisabledRegex = /^eslint-disable(?!.*(--)+\s+\w+)/; // Discover any place that eslint-disable is used WITHOUT a comment
 
-const create = context => ({
-	Program: node => {
+const create = (context) => ({
+	Program: (node) => {
 		for (const comment of node.comments) {
 			const value = comment.value.trim();
-			const res = eslintDisabledRegex.exec(value);
+			const match = eslintDisabledRegex.exec(value);
 
-			if (res) { // The discovered eslint-disable comment
+			if (match) { // The discovered matching eslint-disable infraction
 				context.report({
 					loc: {
 						start: {
@@ -18,7 +18,7 @@ const create = context => ({
 						},
 						end: comment.loc.end
 					},
-					message: 'Inline eslint-disable found'
+					message: 'Found eslint-disable without " -- comment"',
 				});
 			}
 		}

@@ -20,7 +20,7 @@ $ npm install https://github.com/skye2k2/eslint-plugin-bestpractices.git --save-
 
 ## Usage
 
-Add `deprecate` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `bestpractices` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
@@ -42,7 +42,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* [bestpractices/no-eslint-disable](docs/rules/no-eslint-disable.md): Warn when linting has been disabled inline.
+* [bestpractices/no-eslint-disable](docs/rules/no-eslint-disable.md): Warn when linting has been disabled inline WITHOUT an accompanying -- explanation.
 
 ## License
 
